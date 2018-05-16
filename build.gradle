@@ -19,12 +19,12 @@ jar {
         attributes 'Main-Class': 'org.core.Application'
     }
 }
-bootJar{
-//    mainClass = 'com.twp.zuul.Application'
-//    launchScript {
-//        included = true
-//    }
-}
+//bootJar{
+////    mainClass = 'com.twp.zuul.Application'
+////    launchScript {
+////        included = true
+////    }
+//}
 
 
 buildscript {
