@@ -35,7 +35,7 @@ buildscript {
         mavenCentral()//依赖Maven仓库
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.2.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE")
     }
 }
 repositories {
