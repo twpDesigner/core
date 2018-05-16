@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.core.datasource.boot.config.datasource.DataSourceConfig

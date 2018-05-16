@@ -1,0 +1,12 @@
+boot:
+  dynamicDS:
+     uosp40100:
+        url: jdbc:oracle:thin:@192.168.40.100:1521/uosp
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+        username: uosp
+        password: 123456
+     uospTWP:
+        url: jdbc:oracle:thin:@twp.nevermore.tech:49161/XE
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+        username: uosp
+        password: 123456

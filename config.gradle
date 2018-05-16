@@ -1,0 +1,30 @@
+def Dversion = [
+        junit: "4.12",
+        plugin : [
+                lombok : "1.16.18"
+        ],
+        bootStarter: '1.5.7.RELEASE',
+        HikariCP:'3.1.0'
+]
+
+def PdependencyMap = [
+        //运行时提供容器
+        starter:"org.springframework.boot:spring-boot-starter:${Dversion.bootStarter}",
+        //测试依赖库
+        bootstarterTest:"org.springframework.boot:spring-boot-starter-test:${Dversion.bootStarter}",
+        //jdbc
+        jdbc : "org.springframework.boot:spring-boot-starter-jdbc:${Dversion.bootStarter}",
+        //连接池
+        HikariCP:"com.zaxxer:HikariCP:${Dversion.HikariCP}",
+        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop
+        aop:"org.springframework.boot:spring-boot-starter-aop:${Dversion.bootStarter}",
+        lombok : "org.projectlombok:lombok:${Dversion.plugin.lombok}"
+]
+def testdependcyMap= [
+        //junit
+        junit:"junit:junit:${Dversion.junit}",
+]
+ext{
+        compileDeps = PdependencyMap.values()
+        testCompileDeps = testdependcyMap.values()
+}

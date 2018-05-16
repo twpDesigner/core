@@ -1,0 +1,49 @@
+version '1.0'
+
+apply plugin: 'application'
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'war'
+
+//引入配置
+apply from:"config.gradle"
+
+
+//设置jdk的版本
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.core.Application'
+    }
+}
+bootJar{
+//    mainClass = 'com.twp.zuul.Application'
+//    launchScript {
+//        included = true
+//    }
+}
+
+
+buildscript {
+    repositories {
+        //依赖寻源顺序
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()//依赖Maven仓库
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.2.RELEASE")
+    }
+}
+repositories {
+    //依赖寻源顺序
+    mavenLocal()
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    mavenCentral()//依赖Maven仓库
+}
+dependencies{
+    compile(compileDeps)
+    testCompile(testCompileDeps)
+}
