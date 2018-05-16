@@ -1,4 +1,5 @@
-version '1.0'
+group = 'com.twp'
+version = '0.0.1'
 
 apply plugin: 'application'
 apply plugin: 'java'
